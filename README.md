@@ -27,7 +27,7 @@ Estimate the reading time of a setence
 iex> Retim.count("Hello World")
 "1 minute"
 ```
-The standar reading time per minute is 180 words. If you want to change it you can pass a second argument
+The average reading time per minute is 180 words. If you want to change it you can pass a second argument
 ```elixir
 iex> Retim.count("Hello World", 140)
 "1 minute"
