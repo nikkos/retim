@@ -32,17 +32,18 @@ defmodule Retim.Mixfile do
 
   defp description do
     """
-    Retim 
+    Retim
+    Estimate the reading time of a text or a text file
     """
   end
 
   defp package do
     [
       name: :retim,
-      files: [],
-      maintainer: ["Nikos Lamprakakis"],
+      files: ["lib", "mix.exs", "README*"],
+      maintainers: ["Nikos Lamprakakis"],
       licenses: [],
-      links: %{"Github" => ""}]
+      links: %{"Github" => "https://github.com/nikkos/retim"}]
   end
 
   defp deps do
