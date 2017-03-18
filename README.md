@@ -16,7 +16,7 @@ def deps do
 end
 ```
 
-## Hot to use it
+## How to use it
 
 Estimate the reading time of a setence:
 ```elixir
@@ -29,13 +29,13 @@ iex> Retim.count("Hello World", 140)
 "1 minute"
 ```
 
-Read a file:
+Read words from a  file:
 ```elixir
 iex> Retim.count_file("hello.md")
 "4 minutes"
 ```
 
-Read a file and change the reading time:
+Read a file and change the average reading time to 120 words / per minute:
 ```elixir
 iex> Retim.count_file("hello.md", 120)
 "7 minutes"
@@ -63,7 +63,7 @@ Add retim on your dependencies:
   mix phoenix.gen.html Post posts title:string body:text
   ```
 
-  To count the reading time of the body, add count(@post.body) on your templates(post/show.html.eex):
+  To count the reading time of the body text, add count(@post.body) on your templates(post/show.html.eex):
   ```elixir
   <%= Retim.count(@post.body) %>
   ```
@@ -74,4 +74,5 @@ Add retim on your dependencies:
 
 ### To-do
 
-- [ ] Add new print format (3 minutes and 10 seconds)
+- [ ] Add new print format (Example: 3 minutes and 10 seconds)
+- [ ] Add other languages
