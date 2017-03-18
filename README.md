@@ -68,7 +68,7 @@ Add retim on your depencies:
   <%= Retim.count(@post.body) %>
   ```
   ### Result
-  ![alt tag](https://github.com/nikkos/retim/blob/master/example.png)
+  ![alt tag](https://github.com/nikkos/retim/blob/master/example-phoenix.png)
 
 
 
