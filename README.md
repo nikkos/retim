@@ -41,6 +41,37 @@ iex> Retim.count_file("hello.md", 120)
 "7 minutes"
 ```
 
+## Use Retim on Phoenix
+Add retim on your depencies:
+```elixir
+ defp deps do
+    [{:phoenix, "~> 1.2.1"},
+      ........
+      ........
+     {:cowboy, "~> 1.0"},
+     {:retim, "~> 0.1.5"}]
+  end
+  ```
+  Run deps.get on your terminal:
+  ```elixir
+  mix deps.get
+  ```
+  ### Example
+
+  Generate a post:
+  ```elixir
+  mix phoenix.gen.html Post posts title:string body:text
+  ```
+
+  To count the reading time of the body, add count(@post.body) on your templates(post/show.html.eex):
+  ```elixir
+  <%= Retim.count(@post.body) %>
+  ```
+  ### Result
+  ![alt tag](https://github.com/nikkos/retim/blob/master/example.png)
+
+
+
 ### To-do
 
 - [ ] Add new print format (3 minutes and 10 seconds)
