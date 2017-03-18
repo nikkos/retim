@@ -42,7 +42,7 @@ iex> Retim.count_file("hello.md", 120)
 ```
 
 ## Use Retim on Phoenix
-Add retim on your depencies:
+Add retim on your dependencies:
 ```elixir
  defp deps do
     [{:phoenix, "~> 1.2.1"},
