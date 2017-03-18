@@ -1,5 +1,6 @@
 # Retim
 
+[![Build Status](https://travis-ci.org/nikkos/retim.svg?branch=master)](https://travis-ci.org/nikkos/retim)
 
 Estimate the reading time of a text or a text file
 
