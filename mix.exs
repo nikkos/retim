@@ -32,8 +32,7 @@ defmodule Retim.Mixfile do
 
   defp description do
     """
-    Retim
-    Estimate the reading time of a text or a text file
+    Estimate the reading time of a text or a text file.
     """
   end
 
@@ -42,7 +41,7 @@ defmodule Retim.Mixfile do
       name: :retim,
       files: ["lib", "mix.exs", "README*"],
       maintainers: ["Nikos Lamprakakis"],
-      licenses: [],
+      licenses: ["MIT"],
       links: %{"Github" => "https://github.com/nikkos/retim"}]
   end
 

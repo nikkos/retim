@@ -9,10 +9,10 @@ defmodule Retim do
   ## Examples
 
       iex> Retim.count_file("hello.md")
-      "8 minutes"
+      "4 minutes"
 
       iex> Retim.count_file("hello.md", 120)
-      "13 minutes"
+      "7 minutes"
 
   """
 
