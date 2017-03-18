@@ -31,13 +31,13 @@ iex> Retim.count("Hello World", 140)
 Read a file:
 ```elixir
 iex> Retim.count_file("hello.md")
-"4 minutes
+"4 minutes"
 ```
 
 Read a file and change the reading time:
 ```elixir
 iex> Retim.count_file("hello.md", 120)
-"7 minutes
+"7 minutes"
 ```
 
 ### To-do
