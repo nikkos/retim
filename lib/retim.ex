@@ -36,7 +36,7 @@ defmodule Retim do
       iex> Retim.count("Hello World")
       "1 minute"
 
-      iex> Retim.count("Hello World", "en" 120)
+      iex> Retim.count("Hello World", "en", 120)
       "1 minute"
 
   """
