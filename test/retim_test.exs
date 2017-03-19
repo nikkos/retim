@@ -8,7 +8,7 @@ defmodule RetimTest do
   end
 
    test "change the average reading time" do
-    assert(Retim.count("Elixir is the best !", 2) == "3 minutes")
+    assert(Retim.count("Elixir is the best !", "en", 2) == "3 minutes")
   end
 
   test "estimate the reading time of the file" do
@@ -16,6 +16,6 @@ defmodule RetimTest do
   end
 
   test "change the average reading time(of a file)" do
-    assert(Retim.count_file("hello.md", 120) == "7 minutes")
+    assert(Retim.count_file("hello.md", "en", 120) == "7 minutes")
   end
 end

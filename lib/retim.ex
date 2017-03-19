@@ -12,7 +12,7 @@ defmodule Retim do
       iex> Retim.count_file("hello.md")
       "4 minutes"
 
-      iex> Retim.count_file("hello.md", 120)
+      iex> Retim.count_file("hello.md", "en", 120)
       "7 minutes"
 
   """
@@ -36,7 +36,7 @@ defmodule Retim do
       iex> Retim.count("Hello World")
       "1 minute"
 
-      iex> Retim.count("Hello World", 120)
+      iex> Retim.count("Hello World", "en" 120)
       "1 minute"
 
   """
@@ -55,23 +55,23 @@ defmodule Retim do
     setence / average_reading_time
   end
 
-  def choose_language(lang) do
-      case lang do
-        "gr" -> %Retim.Language {lang: "gr", enikos: "λεπτό", plural: "λεπτά"}
-        "en" -> %Retim.Language {lang: "en", enikos: "minute", plural: "minutes"}
-        "es" -> %Retim.Language {lang: "es", enikos: "minuto", plural: "minutos"}
-        "it" -> %Retim.Language {lang: "it", enikos: "minuto", plural: "minuti"}
-        _    -> %Retim.Language {lang: "en", enikos: "minute", plural: "minutes"}
-      end
-  end
-
   defp print_reading_time(reading_time, lang) do
     message = choose_language(lang)
     cond do
       reading_time <= 1 ->
-       "1 #{message.enikos}"
+       "1 #{message.singular}"
       reading_time > 1  ->
         "#{round(reading_time)} #{message.plural}"
+    end
+  end
+
+  defp choose_language(lang) do
+    case lang do
+      "gr" -> %Retim.Language {lang: "gr", singular: "λεπτό",  plural: "λεπτά"}
+      "en" -> %Retim.Language {lang: "en", singular: "minute", plural: "minutes"}
+      "es" -> %Retim.Language {lang: "es", singular: "minuto", plural: "minutos"}
+      "it" -> %Retim.Language {lang: "it", singular: "minuto", plural: "minuti"}
+      _    -> %Retim.Language {lang: "en", singular: "minute", plural: "minutes"}
     end
   end
 
