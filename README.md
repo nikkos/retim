@@ -16,10 +16,10 @@ def deps do
 end
 ```
 ## Supported languages:
-- English: "en"
-- Greek:   "gr"
-- Italian: "it"
-- Spanish: "es"
+- English:  "en"
+- Greek:    "gr"
+- Italian:  "it"
+- Spanish:  "es"
 
 ## How to use it
 
@@ -45,7 +45,6 @@ If you want to change only the reading time, you need to choose the language or 
 iex> Retim.count("Hello World", "", 150)
 ```
 
-
 Read words from a  file:
 ```elixir
 iex> Retim.count_file("hello.md")
@@ -57,13 +56,6 @@ Read a file and change the average reading time to 120 words / per minute:
 iex> Retim.count_file("hello.md", "en", 120)
 "7 minutes"
 ```
-
-If you want, you can change the default language:
-```elixir
-iex>Retim.count("Hello World", "it")
-"1 minuto"
-```
-
 
 ## Use Retim on Phoenix
 Add retim on your dependencies:
@@ -103,6 +95,5 @@ Add retim on your dependencies:
 
 
 ### To-do
-
+- [x] Add other languages
 - [ ] Add new print format (Example: 3 minutes and 10 seconds)
-- [ ] Add other languages
