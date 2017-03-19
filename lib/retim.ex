@@ -15,9 +15,12 @@ defmodule Retim do
       iex> Retim.count_file("hello.md", "en", 120)
       "7 minutes"
 
+      iex> Retim.count_file("hello.md", "es", 120)
+      "7 minutos"
+
   """
 
-  def count_file(setence,lang \\ "en", average_reading_time \\ 180) do
+  def count_file(setence, lang \\ "en", average_reading_time \\ 180) do
     File.read(setence)
     |> Tuple.to_list 
     |> Enum.drop(1) 
@@ -38,6 +41,9 @@ defmodule Retim do
 
       iex> Retim.count("Hello World", "en", 120)
       "1 minute"
+
+      iex> Retim.count("Hellow World", "es", 120)
+      "1 minuto"
 
   """
   def count(setence, lang \\ "en", average_reading_time \\ 180) do

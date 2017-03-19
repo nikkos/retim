@@ -18,4 +18,8 @@ defmodule RetimTest do
   test "change the average reading time(of a file)" do
     assert(Retim.count_file("hello.md", "en", 120) == "7 minutes")
   end
+
+  test "change the default language to spanish" do
+    assert(Retim.count_file("hello.md", "es", 120) == "7 minutos")
+  end
 end

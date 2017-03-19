@@ -6,15 +6,20 @@ Estimate the reading time of a text or a text file
 
 ## Installation
 
-You can donwload retim or you can install it as package to use it in your projects.
-You can found it at [https://hex.pm/packages/retim](https://hexdocs.pm/retim).
+You can donwload retim or you can install it as package, to use it in your projects.
+You can found it at [Hex](https://hex.pm/packages/retim).
 Also you can add `retim` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:retim, "~> 0.2.0"}]
+  [{:retim, "~> 0.2.1"}]
 end
 ```
+## Supported languages:
+- English: "en"
+- Greek:   "gr"
+- Italian: "it"
+- Spanish: "es"
 
 ## How to use it
 
@@ -23,11 +28,23 @@ Estimate the reading time of a setence:
 iex> Retim.count("Hello World")
 "1 minute"
 ```
+You can change the default language:
+```elixir
+iex> Retim.count("Hello World", "it")
+"1 minuto"
+```
+
 The average reading time per minute is 180 words. If you want to change it you can pass a second argument:
 ```elixir
-iex> Retim.count("Hello World", "en",140)
+iex> Retim.count("Hello World", "en", 120)
 "1 minute"
 ```
+
+If you want to change only the reading time, you need to choose the language or leave the second argument blank:
+```elixir
+iex> Retim.count("Hello World", "", 150)
+```
+
 
 Read words from a  file:
 ```elixir
@@ -41,6 +58,13 @@ iex> Retim.count_file("hello.md", "en", 120)
 "7 minutes"
 ```
 
+If you want, you can change the default language:
+```elixir
+iex>Retim.count("Hello World", "it")
+"1 minuto"
+```
+
+
 ## Use Retim on Phoenix
 Add retim on your dependencies:
 ```elixir
@@ -49,7 +73,7 @@ Add retim on your dependencies:
       ........
       ........
      {:cowboy, "~> 1.0"},
-     {:retim, "~> 0.2.0"}]
+     {:retim, "~> 0.2.1"}]
   end
   ```
   Run deps.get on your terminal:
@@ -68,8 +92,14 @@ Add retim on your dependencies:
   <%= Retim.count(@post.body) %>
   ```
   ### Result
-  ![alt tag](https://github.com/nikkos/retim/blob/master/example-phoenix.png)
+  ![alt tag](https://github.com/nikkos/retim/blob/master/example1.png)
 
+  To change the language add:
+  ```elixir
+  <%= Retim.count(@post.body, "es") %>
+  ```
+  ### Result (with spanish)
+  ![alt tag](https://github.com/nikkos/retim/blob/master/example2.png)
 
 
 ### To-do
