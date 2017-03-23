@@ -20,6 +20,7 @@ end
 - Greek:    "gr"
 - Italian:  "it"
 - Spanish:  "es"
+- Norwegian "no"
 
 ## How to use it
 
