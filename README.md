@@ -12,7 +12,7 @@ Also you can add `retim` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
-  [{:retim, "~> 0.2.1"}]
+  [{:retim, "~> 0.2.2"}]
 end
 ```
 ## Supported languages:
@@ -66,7 +66,7 @@ Add retim on your dependencies:
       ........
       ........
      {:cowboy, "~> 1.0"},
-     {:retim, "~> 0.2.1"}]
+     {:retim, "~> 0.2.2"}]
   end
   ```
   Run deps.get on your terminal:
