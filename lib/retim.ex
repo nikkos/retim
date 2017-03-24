@@ -78,9 +78,12 @@ defmodule Retim do
       "es" -> %Retim.Language {lang: "es", singular: "minuto", plural: "minutos"}
       "it" -> %Retim.Language {lang: "it", singular: "minuto", plural: "minuti"}
       "no" -> %Retim.Language {lang: "no", singular: "minutt", plural: "minutter"}
+      "ru" -> %Retim.Language {lang: "no", singular: "mинута", plural: "mинуты"}
+      "ge" -> %Retim.Language {lang: "no", singular: "minute", plural: "minuten"}
       _    -> %Retim.Language {lang: "en", singular: "minute", plural: "minutes"}
     end
   end
 
 end
 
+Protokoll
