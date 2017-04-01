@@ -22,9 +22,9 @@ defmodule Retim do
 
   def count_file(setence, lang \\ "en", average_reading_time \\ 180) do
     File.read(setence)
-    |> Tuple.to_list 
-    |> Enum.drop(1) 
-    |> List.first 
+    |> Tuple.to_list
+    |> Enum.drop(1)
+    |> List.first
     |> String.split(~r/[\s_&!?:@$%^,\.]+/)
     |> Enum.count
     |> estimate_reading_time(average_reading_time)
@@ -85,5 +85,3 @@ defmodule Retim do
   end
 
 end
-
-Protokoll
