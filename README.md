@@ -21,6 +21,8 @@ end
 - Italian:  "it"
 - Spanish:  "es"
 - Norwegian "no"
+- German    "ge"
+- Russian   "ru"
 
 ## How to use it
 
@@ -58,7 +60,7 @@ iex> Retim.count_file("hello.md", "en", 120)
 "7 minutes"
 ```
 
-## Use Retim on Phoenix
+## Use Retim in Phoenix
 Add retim on your dependencies:
 ```elixir
  defp deps do
