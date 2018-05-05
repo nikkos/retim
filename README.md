@@ -16,13 +16,14 @@ def deps do
 end
 ```
 ## Supported languages:
-- English:  "en"
-- Greek:    "gr"
-- Italian:  "it"
-- Spanish:  "es"
-- Norwegian "no"
-- German    "ge"
-- Russian   "ru"
+- English:    "en"
+- Greek:      "gr"
+- Italian:    "it"
+- Spanish:    "es"
+- Norwegian:  "no"
+- German:     "ge"
+- Russian:    "ru"
+- Portuguese: "pt"
 
 ## How to use it
 
