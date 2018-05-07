@@ -2,14 +2,16 @@ defmodule Retim.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :retim,
-     version: "0.2.3",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: description(),
-     package: package(),
-     deps: deps()]
+    [
+      app: :retim,
+      version: "0.2.3",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application
@@ -42,11 +44,11 @@ defmodule Retim.Mixfile do
       files: ["lib", "mix.exs", "README*"],
       maintainers: ["Nikos Lamprakakis"],
       licenses: ["MIT"],
-      links: %{"Github" => "https://github.com/nikkos/retim"}]
+      links: %{"Github" => "https://github.com/nikkos/retim"}
+    ]
   end
 
   defp deps do
-    [
-      {:ex_doc, "~> 0.14"}]
+    [{:ex_doc, "~> 0.14"}]
   end
 end
