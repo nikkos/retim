@@ -1,3 +1,3 @@
 defmodule Retim.Language do
-	defstruct lang: "en", singular: "minute", plural: "minutes"
+  defstruct lang: "en", singular: "minute", plural: "minutes"
 end
